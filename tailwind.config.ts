@@ -12,7 +12,14 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "basic": ["Libre Baskerville", "serif"]
+      }
     },
+    colors: {
+      "basicBackground": "#4b1f1f",
+      "navbarBackground": "#EBE4DA"
+    }
   },
   plugins: [],
 };
