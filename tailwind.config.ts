@@ -18,7 +18,8 @@ const config: Config = {
     },
     colors: {
       "basicBackground": "#4b1f1f",
-      "navbarBackground": "#EBE4DA"
+      "navbarBackground": "#EBE4DA",
+      "white": "#ffffff",
     }
   },
   plugins: [],
