@@ -27,7 +27,7 @@ const Navbar = () => {
                 height={50}
                 alt="Picture of the author"
               ></Image>
-              <h1 className="text-xl font-semibold md:text-2xl md:mt-3">Kovács Endre</h1>
+              <h1 className="text-xl font-semibold md:text-2xl md:mt-3 hover:text-white duration-300"><button><Link href="/">Kovács Endre</Link></button></h1>
               <h2 className="text-[0.6rem] font-thin mb-3 md:text-sm">
                 orgonaművész emlékoldala
               </h2>
