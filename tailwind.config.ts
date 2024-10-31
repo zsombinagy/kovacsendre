@@ -20,6 +20,7 @@ const config: Config = {
       "basicBackground": "#4b1f1f",
       "navbarBackground": "#EBE4DA",
       "white": "#ffffff",
+      "black": "#000000"
     }
   },
   plugins: [],

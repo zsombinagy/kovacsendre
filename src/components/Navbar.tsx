@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -16,12 +17,12 @@ const Navbar = () => {
         
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-7 justify-center items-center py-3 w-full">
           <div className="hidden md:flex text-sm">
-              <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">Tanárok és Példaképek</button>
-              <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">Művészkollégák</button>
+              <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500"><Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link></button>
+              <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500"><Link href="/muveszkollegak">Művészkollégák</Link></button>
           </div>
           <div className="flex flex-col justify-center items-center">
               <Image
-                src="/orgona1.png"
+                src="/orgona.png"
                 width={50}
                 height={50}
                 alt="Picture of the author"
@@ -33,8 +34,8 @@ const Navbar = () => {
               <button onClick={handleToggle} className="focus:outline-none md:hidden bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground"> Menu</button>
           </div>
           <div className="hidden md:block text-sm">
-              <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">Újságcikkek, kritikák, elismerések</button>
-              <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">Kapcsolat</button>
+              <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500"><Link href="/ujsagcikkek">Újságcikkek, kritikák, elismerések</Link></button>
+              <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500"><Link href="/kapcsolat">Kapcsolat</Link></button>
           </div>
 
         </div>
