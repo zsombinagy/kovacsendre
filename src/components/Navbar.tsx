@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
+
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -11,15 +13,19 @@ const Navbar = () => {
     setIsToggled(!isToggled);
   };
 
+  const pathName = usePathname()
+
+  
+
   return (
     <>
       <div className="w-full">
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-12 justify-center items-center py-3 w-full">
           <div className="hidden md:flex text-sm md:mr-7">
-            <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">
+            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/tanarokespeldakepek" && "bg-basicBackground text-navbarBackground"}`}>
               <Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link>
             </button>
-            <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">
+            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/muveszkollegak" && "bg-basicBackground text-navbarBackground"}`}>
               <Link href="/muveszkollegak">Művészkollégák</Link>
             </button>
           </div>
@@ -47,12 +53,12 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block text-sm">
-            <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">
+            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/ujsagcikkek" && "bg-basicBackground text-navbarBackground"}`}>
               <Link href="/ujsagcikkek">
                 Újságcikkek, kritikák, elismerések
               </Link>
             </button>
-            <button className="border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">
+            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/kapcsolat" && "bg-basicBackground text-navbarBackground"}`}>
               <Link href="/kapcsolat">Kapcsolat</Link>
             </button>
           </div>
