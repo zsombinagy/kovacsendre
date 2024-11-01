@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <div className="w-full">
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-12 justify-center items-center py-3 w-full">
-          <div className="hidden md:flex text-sm">
+          <div className="hidden md:flex text-sm md:mr-7">
             <button className="mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500">
               <Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link>
             </button>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <button onClick={handleToggle} className="focus:outline-none md:hidden bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"  >
               Menu
             </button>
-            <div className={`absolute ${isToggled ? "hidden" : "top-[9.5rem]"} duration-500 md:top-[8.5rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
+            <div className={`absolute ${isToggled ? "hidden" : "top-[9.5rem]"} md:block duration-500 md:top-[8.5rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
           </div>
           
           <div className="hidden md:block text-sm">
@@ -62,16 +62,18 @@ const Navbar = () => {
           className={`flex flex-col justify-center bg-navbarBackground items-center md:hidden transition-all duration-500 ease-in-out transform${
             isToggled ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} z-10`}>
           <div className="w-full border-basicBackground border-t-2 justify-center flex">
-            <h1>Tanárok és példaképek</h1>
+            <h1><Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link></h1>
           </div>
           <div className="w-full border-basicBackground border-t-2 justify-center flex">
-            <h1>Pályatársak és művészkollégák</h1>
+            <Link href="/muveszkollegak">Művészkollégák</Link>
           </div>
           <div className="w-full border-basicBackground border-t-2 justify-center flex">
-            <h1>Újságcikkek, kritikák, elismerések</h1>
+          <Link href="/ujsagcikkek">
+                Újságcikkek, kritikák, elismerések
+              </Link>
           </div>
           <div className="w-full border-basicBackground border-t-2 justify-center flex">
-            <h1>Kapcsolat</h1>
+            <Link href="/kapcsolat">Kapcsolat</Link>
           </div>
           <div className={`absolute top-[16.3rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
 

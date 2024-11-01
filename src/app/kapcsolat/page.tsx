@@ -4,7 +4,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-around text-white w-full">
+      <div className="flex flex-col items-center justify-around mt-5 text-white w-full">
         <h1 className="text-2xl my-5">Kapcsolat a családdal</h1>
         <p className="text-base text-center">Kovács Beáta, Nagy Dávid és Nagy Zsombor</p>
         <div className="flex items-center flex-col md:flex-row md:justify-around w-full my-10">
