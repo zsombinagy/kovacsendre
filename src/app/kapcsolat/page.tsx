@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 
 const page = () => {
+
+  
   return (
     <>
       <div className="flex flex-col items-center justify-around mt-5 text-white w-full">

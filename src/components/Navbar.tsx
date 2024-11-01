@@ -33,12 +33,12 @@ const Navbar = () => {
             <div className="absolute top-[1.7rem] w-28 h-20 bg-navbarBackground rounded-t-full"></div>
             <Image
               src="/orgona.png"
-              width={50}
-              height={50}
+              width={55}
+              height={55}
               alt="Picture of the author"
               className="z-10"
             ></Image>
-            <h1 className="text-xl font-semibold md:text-2xl md:mt-3 hover:text-white duration-300 z-10">
+            <h1 className="text-xl font-semibold md:text-2xl md:mt-1 hover:text-white duration-300 z-10">
               <button>
                 <Link href="/">Kovács Endre</Link>
               </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <button onClick={handleToggle} className="focus:outline-none md:hidden bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"  >
               Menu
             </button>
-            <div className={`absolute ${isToggled ? "hidden" : "top-[9.5rem]"} md:block duration-500 md:top-[8.5rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
+            <div className={`absolute ${isToggled ? "hidden" : "top-[9.7rem]"} md:block duration-500 md:top-[8.3rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
           </div>
           
           <div className="hidden md:block text-sm">
