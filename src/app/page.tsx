@@ -111,7 +111,7 @@ export default function Home() {
             </div>
           ))}
           <div className="text-sm md:text-xl flex flex-col border-x-2 border-t-2 border-black w-11/12 mt-10">
-            <div className="flex border-b-2 border-white">
+            <div className="flex border-b-2 border-white md:text-2xl">
               <div className="w-9/12 border-r-2 border-black px-2 py-1">Elismerés</div>
               <div className="w-3/12 px-2 py-1 text-center">Évszám</div>
             </div>
@@ -129,13 +129,13 @@ export default function Home() {
           <h1 className="text-2xl md:text-4xl text-white mt-7 text-left">Lemezek</h1>
           <div className="text-sm flex flex-col border-x-2 border-t-2 border-black w-11/12 mt-5">
             <div className="flex border-b-2 border-white">
-              <div className="w-9/12 border-r-2 border-black px-2 py-1">Lemezek</div>
-              <div className="w-3/12 px-2 py-1 text-center">Évszám</div>
+              <div className="w-9/12 md:text-2xl border-r-2 border-black px-2 py-1">Lemezek</div>
+              <div className="w-3/12 px-2 py-1 text-center md:text-2xl">Évszám</div>
             </div>
 
             {Plates.map((item, index) => (
               <>
-                <div key={index} className="flex border-b-2 border-black items-center">
+                <div key={index} className="flex border-b-2 border-black items-center md:text-xl">
                   <div className="w-9/12 border-r-2 border-black px-2 py-1">{item.title}</div>
                   <div className="w-3/12 px-2 py-1 text-center">{item.year}</div>
                 </div>
