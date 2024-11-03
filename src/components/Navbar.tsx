@@ -19,33 +19,33 @@ const Navbar = () => {
       <div className="w-full">
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-12 justify-center items-center py-3 w-full">
           <div className="flex flex-col justify-center items-center">
-            <div className="absolute top-[1.7rem] w-28 h-20 bg-navbarBackground rounded-t-full"></div>
+            <div className="absolute top-[1.7rem] md:top-[1.1rem] w-28 h-20 bg-navbarBackground rounded-t-full md:w-44 md:h-36"></div>
             <div></div>
             <Image
               src="/orgona.png"
               width={80}
               height={80}
               alt="Picture of the author"
-              className="z-10"
+              className="z-10 md:w-32"
             ></Image>
-            <h1 className="text-xl font-semibold md:text-2xl md:mt-1 hover:text-white duration-300 z-10 md:text-2xl">
+            <h1 className="text-xl font-semibold md:mt-1 hover:text-white duration-300 z-10 md:text-4xl">
               <button>
                 <Link href="/">Kovács Endre</Link>
               </button>
             </h1>
-            <h2 className="text-[0.6rem] font-thin mb-3 md:text-base z-10">
+            <h2 className="text-[0.6rem] font-thin mb-3 z-10 md:text-xl">
               orgonaművész emlékoldala
             </h2>
             <button
               onClick={handleToggle}
-              className="focus:outline-none bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"
+              className="focus:outline-none bg-basicBackground px-2 py-1 text-navbarBackground text-base md:text-xl rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"
             >
               Menu
             </button>
             <div
               className={`absolute ${
-                isToggled ? "hidden" : "top-[13rem]"
-              } duration-500 w-28 h-20 bg-navbarBackground rounded-b-full -z-10 `}
+                isToggled ? "hidden" : "top-[11.5rem] md:top-[13rem]"
+              } duration-500 w-28 h-20 md:w-44 md:h-36 bg-navbarBackground rounded-b-full -z-10 `}
             ></div>
           </div>
         </div>
@@ -68,11 +68,11 @@ const Navbar = () => {
           <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/ujsagcikkek" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/ujsagcikkek">Újságcikkek, kritikák, elismerések</Link>
           </div>
-          <div className={`w-full border-t-basicBackground border-b-navbarBackground border-y-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/kapcsolat" && "bg-basicBackground text-navbarBackground"}`}>
+          <div className={`w-full border-t-basicBackground border-b-navbarBackground border-y-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/kapcsolat">Kapcsolat</Link>
           </div>
           <div
-            className={`absolute top-[18rem] md:top-[19rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}
+            className={`absolute top-[18rem] md:top-[19.7rem] w-28 h-20 md:w-44 md:h-36 bg-navbarBackground rounded-b-full -z-10`}
           ></div>
         </div>
       </div>
