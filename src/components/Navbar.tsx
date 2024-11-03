@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <div className="w-full">
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-12 justify-center items-center py-3 w-full">
-          <div className="hidden md:flex text-sm md:mr-7">
+          <div className="hidden md:flex md:text-xl text-sm md:mr-7">
             <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/tanarokespeldakepek" && "bg-basicBackground text-navbarBackground"}`}>
               <Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link>
             </button>
