@@ -83,34 +83,34 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-8 w-11/12 md:w-6/12">
+      <div className="mt-8 w-11/12 md:w-9/12 lg:w-7/12 md:mt-20">
         <div className="flex justify-center items-center flex-col text-white">
-          <h1 className="text-white text-3xl text-center ">
+          <h1 className="text-white text-3xl md:text-5xl text-center ">
             Kovács Endre <br /> orgonaművész emlékoldala
           </h1>
-          <span className="bg-navbarBackground w-12 h-[0.05rem] mt-3"></span>
+          <span className="bg-navbarBackground w-12 h-[0.05rem] mt-3 md:my-5 md:w-28"></span>
           <Image
-            className="mt-5"
+            className="mt-5 md:w-9/12 md:h-9/12"
             src={"/kovacs_endre_jozsefváros_reformatus_templom.jpg"}
             width={400}
             height={400}
             alt="picture of Kovács Endre"
           ></Image>
-          <p className=" mt-2 text-white text-[0.8rem]">
+          <p className=" mt-2 text-white text-[0.8rem] md:text-xl">
             1936. június 5 - 2015. április 3.
           </p>
           {descriptions.map((item, index) => (
             
             <div key={index} className="mt-5 flex flex-col items-center">
-              <span className="bg-navbarBackground w-12 h-[0.05rem] mt-8"></span>
-              <h1 className="mt-5 text-white text-2xl text-left">
+              <span className="bg-navbarBackground w-12 h-[0.05rem] my-8 md:w-28"></span>
+              <h1 className="mt-5 text-white text-2xl text-left md:text-4xl">
                 {item.title}
               </h1>
-              <p className="mt-3 text-sm text-left">{item.description}</p>
+              <p className="mt-3 text-sm text-left md:text-2xl">{item.description}</p>
               
             </div>
           ))}
-          <div className="text-sm flex flex-col border-x-2 border-t-2 border-black w-11/12 mt-10">
+          <div className="text-sm md:text-xl flex flex-col border-x-2 border-t-2 border-black w-11/12 mt-10">
             <div className="flex border-b-2 border-white">
               <div className="w-9/12 border-r-2 border-black px-2 py-1">Elismerés</div>
               <div className="w-3/12 px-2 py-1 text-center">Évszám</div>
@@ -125,8 +125,8 @@ export default function Home() {
               </>
             ))}
           </div>
-          <span className="bg-navbarBackground w-12 h-[0.05rem] mt-8"></span>
-          <h1 className="text-2xl text-white mt-7 text-left">Lemezek</h1>
+          <span className="bg-navbarBackground w-12 h-[0.05rem] my-8 md:w-28"></span>
+          <h1 className="text-2xl md:text-4xl text-white mt-7 text-left">Lemezek</h1>
           <div className="text-sm flex flex-col border-x-2 border-t-2 border-black w-11/12 mt-5">
             <div className="flex border-b-2 border-white">
               <div className="w-9/12 border-r-2 border-black px-2 py-1">Lemezek</div>

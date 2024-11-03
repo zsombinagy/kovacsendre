@@ -111,40 +111,40 @@ const Colleagues: ColleaguesType[] = [
 
 const page = () => {
   return (
-    <div className='flex justify-center flex-col items-center mt-7'>
-      <h1 className='text-3xl text-white font-bold px-5 text-center'>Pályatársak, művészkollégák</h1>
+    <div className='flex justify-center flex-col items-center mt-7 px-3 md:px-0'>
+      <h1 className='text-3xl text-white font-bold px-5 text-center md:text-5xl'>Pályatársak, művészkollégák</h1>
       {Colleagues.map((item, index) => (
             <>
-                <div key={index} className='flex flex-col items-center justify-center mt-10 md:w-9/12'>
-                    <h1 className='text-2xl  text-navbarBackground hover:underline hover:cursor-pointer hover:text-[1.7rem] duration-500'><Link href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</Link></h1>
-                    <Image className='mt-3' src={item.first_image} width={350} height={350} alt={item.name}></Image>
-                    {item.first_image_description && <p className='text-navbarBackground text-[0.8rem] mt-5 text-center'>{item.first_image_description}</p>}
-                    {item.description && <p className='text-center text-base text-navbarBackground mt-5 px-5'>{item.description}</p>}
-                    {item.second_image && <Image className='mt-5' src={item.second_image} width={350} height={350} alt={item.name}></Image>}
-                    {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center'>{item.second_image_description}</p>}
-                    {item.third_image && <Image className='mt-5' src={item.third_image} width={350} height={250} alt={item.name}></Image>}
-                    {item.third_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center'>{item.third_image_description}</p>}
-                    {item.fourth_image && <Image className='mt-5' src={item.fourth_image} width={350} height={350} alt={item.name}></Image>}
-                    {item.fourth_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center'>{item.fourth_image_description}</p>}
+                <div key={index} className='flex flex-col items-center justify-center mt-10 md:w-9/12 lg:w-6/12'>
+                    <h1 className='text-2xl md:text-4xl  text-navbarBackground hover:underline hover:cursor-pointer hover:text-[2.8rem] duration-500'><Link href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</Link></h1>
+                    <Image className='mt-3' src={item.first_image} width={500} height={500} alt={item.name}></Image>
+                    {item.first_image_description && <p className='text-navbarBackground text-[0.8rem] mt-5 text-center md:text-xl'>{item.first_image_description}</p>}
+                    {item.description && <p className='text-center text-base text-navbarBackground mt-5 px-5 md:text-xl'>{item.description}</p>}
+                    {item.second_image && <Image className='mt-5' src={item.second_image} width={500} height={500} alt={item.name}></Image>}
+                    {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center md:text-xl'>{item.second_image_description}</p>}
+                    {item.third_image && <Image className='mt-5' src={item.third_image} width={500} height={500} alt={item.name}></Image>}
+                    {item.third_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center md:text-xl'>{item.third_image_description}</p>}
+                    {item.fourth_image && <Image className='mt-5' src={item.fourth_image} width={500} height={500} alt={item.name}></Image>}
+                    {item.fourth_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 text-center md:text-xl'>{item.fourth_image_description}</p>}
                     {item.side_by_side_pictures && 
                         <div className={`flex flex-col mt-10 justify-center items-center md:w-full`}>
                           <div className='flex flex-col md:flex-row md:w-9/12 md:justify-center'>
-                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2'>
-                              <Image src={item.side_by_side_pictures.first} width={200} height={200} alt={item.name}></Image>
+                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2 md:px-0'>
+                              <Image src={item.side_by_side_pictures.first} width={350} height={350} alt={item.name}></Image>
                             </div>
-                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2'>
-                              <Image src={item.side_by_side_pictures.second} width={200} height={200} alt={item.name}></Image>
+                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2 md:px-0'>
+                              <Image src={item.side_by_side_pictures.second} width={350} height={350} alt={item.name}></Image>
                             </div >
-                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2'>
+                            <div className='mt-3 md:mt-0 flex justify-center items-center px-2 md:px-0'>
                               {item.side_by_side_pictures.third &&
-                                <Image src={item.side_by_side_pictures.third} width={200} height={200} alt={item.name}></Image>
+                                <Image src={item.side_by_side_pictures.third} width={350} height={350} alt={item.name}></Image>
                               }
                             </div>
  
                           </div>
                            {
                             item.side_by_side_pictures.description &&
-                            <p className='text-white text-[0.8rem] text-center mt-2
+                            <p className='text-white text-[0.8rem] text-center mt-2 md:text-xl
                             '>
                               {item.side_by_side_pictures.description}
                             </p>

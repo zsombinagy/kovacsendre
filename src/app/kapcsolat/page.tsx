@@ -6,17 +6,17 @@ const page = () => {
   
   return (
     <>
-      <div className="flex flex-col items-center justify-around mt-5 text-white w-full">
-        <h1 className="text-2xl my-5">Kapcsolat a családdal</h1>
-        <p className="text-base text-center">Kovács Beáta, Nagy Dávid és Nagy Zsombor</p>
-        <div className="flex items-center flex-col md:flex-row md:justify-around w-full my-10">
-          <Image
+      <div className="flex flex-col items-center justify-center mt-5 text-white w-full">
+        <h1 className="text-2xl my-5 md:text-4xl md:mt-10">Kapcsolat a családdal</h1>
+        <p className="text-base text-center md:text-2xl">Kovács Beáta, Nagy Dávid és Nagy Zsombor</p>
+        <div className="flex items-center flex-col lg:flex-row lg:justify-center lg:w-8/12 my-10 ">
+          <Image className="md:mr-10"
             src="/csalad.jpg"
-            width={450}
-            height={450}
+            width={600}
+            height={600}
             alt="Család"
-          ></Image>{" "}
-          <div className="flex flex-col items-center mt-10 md:mt-3">
+          ></Image>
+          <div className="flex flex-col items-center mt-10 md:mt-3 md:text-xl">
             <Image
               className="rounded"
               src="/telefon.webp"

@@ -73,32 +73,32 @@ const TeachersAndModels: TeachersType[] = [
 
 const page = () => {
   return (
-    <div className='flex justify-center flex-col items-center mt-7'>
-        <h1 className='text-3xl text-white font-bold'>Tanárok és példaképek</h1>
+    <div className='flex justify-center flex-col items-center md:mt-10 mt-7 px-3 md:px-0'>
+        <h1 className='text-3xl text-white font-bold md:text-5xl'>Tanárok és példaképek</h1>
         {TeachersAndModels.map((item, index) => (
             <>
                 <div key={index} className='flex flex-col items-center justify-center mt-10 md:w-9/12'>
-                    <h1 className='text-2xl  text-navbarBackground hover:underline hover:cursor-pointer hover:text-[1.7rem] duration-500'><Link href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</Link></h1>
-                    <Image className='mt-3' src={item.first_image} width={300} height={300} alt={item.name}></Image>
-                    {item.first_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2'>{item.first_image_description}</p>}
-                    {item.description && <p className='text-center text-base text-navbarBackground mt-5 px-5'>{item.description}</p>}
+                    <h1 className='text-2xl md:text-4xl text-navbarBackground hover:underline hover:cursor-pointer hover:text-[2.8rem] duration-500'><Link href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</Link></h1>
+                    <Image className='mt-3' src={item.first_image} width={400} height={400} alt={item.name}></Image>
+                    {item.first_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 md:text-xl'>{item.first_image_description}</p>}
+                    {item.description && <p className='text-center text-base text-navbarBackground mt-5 px-5 md:text-2xl'>{item.description}</p>}
                     { item.second_image && 
-                        <div className={`flex flex-col md:flex-row ${item.third_image ? "md:justify-around md:w-full" : "justify-center"} mt-10`}>
-                            <div className='flex justify-center flex-col items-center'>
-                            <Image className=' justify-center' src={item.second_image} width={250} height={250} alt={item.name}></Image>
-                            {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2'>{item.second_image_description}</p>}
+                        <div className={`flex flex-col md:flex-row ${item.third_image ? "justify-center md:w-full" : "justify-center"} mt-10`}>
+                            <div className='flex justify-center flex-col items-center md:mr-10'>
+                            <Image className=' justify-center' src={item.second_image} width={400} height={400} alt={item.name}></Image>
+                            {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 md:text-xl'>{item.second_image_description}</p>}
                             </div>
 
                             { item.third_image && 
-                                <div className='mt-5 md:mt-0 flex justify-center flex-col items-center'>
-                                    <Image className='' src={item.third_image} width={250} height={250} alt={item.name}></Image>
-                                    {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2'>{item.third_image_description}</p>}
+                                <div className='mt-5 md:mt-0 flex justify-center flex-col items-center md:ml-10'>
+                                    <Image className='' src={item.third_image} width={400} height={400} alt={item.name}></Image>
+                                    {item.second_image_description && <p className='text-navbarBackground text-[0.8rem] mt-2 md:text-xl'>{item.third_image_description}</p>}
                                 </div>
                             }
                             
                         </div>
                     }
-                    <span className="bg-navbarBackground w-12 h-[0.05rem] mt-8"></span>
+                    <span className="bg-navbarBackground w-12 h-[0.05rem] mt-8 md:mt-20 md:w-28"></span>
                 </div>
             </>
 

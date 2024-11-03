@@ -55,7 +55,7 @@ const Navbar = () => {
             isToggled
               ? "translate-y-0 opacity-100"
               : "-translate-y-10 opacity-0"
-          } z-10 text-basicBackground`}
+          } z-10 text-basicBackground md:text-2xl`}
         >
           <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/tanarokespeldakepek" && "bg-basicBackground text-navbarBackground"}`}>
             <h1>
@@ -68,11 +68,11 @@ const Navbar = () => {
           <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/ujsagcikkek" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/ujsagcikkek">Újságcikkek, kritikák, elismerések</Link>
           </div>
-          <div className={`w-full border-t-basicBackground border-b-navbarBackground border-y-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/" && "bg-basicBackground text-navbarBackground"}`}>
+          <div className={`w-full border-t-basicBackground border-b-navbarBackground border-y-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/kapcsolat" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/kapcsolat">Kapcsolat</Link>
           </div>
           <div
-            className={`absolute top-[18rem] md:top-[19.7rem] w-28 h-20 md:w-44 md:h-36 bg-navbarBackground rounded-b-full -z-10`}
+            className={`absolute top-[18rem] md:top-[22rem] w-28 h-20 md:w-44 md:h-36 bg-navbarBackground rounded-b-full -z-10`}
           ></div>
         </div>
       </div>
