@@ -110,6 +110,10 @@ const Colleagues: ColleaguesType[] = [
 ]
 
 const page = () => {
+
+
+
+
   return (
     <div className='flex justify-center flex-col items-center mt-7 px-3 md:px-0'>
       <h1 className='text-3xl text-white font-bold px-5 text-center md:text-5xl'>Pályatársak, művészkollégák</h1>
