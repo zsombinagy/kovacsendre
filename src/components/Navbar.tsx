@@ -1,10 +1,9 @@
 "use client";
 
-import { useState} from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -15,74 +14,66 @@ const Navbar = () => {
 
   const pathName = usePathname()
 
-  
-
   return (
     <>
       <div className="w-full">
         <div className="bg-navbarBackground text-basicBackground md:justify-around flex mt-12 justify-center items-center py-3 w-full">
-          <div className="hidden md:flex md:text-xl text-sm md:mr-7">
-            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/tanarokespeldakepek" && "bg-basicBackground text-navbarBackground"}`}>
-              <Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link>
-            </button>
-            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/muveszkollegak" && "bg-basicBackground text-navbarBackground"}`}>
-              <Link href="/muveszkollegak">Művészkollégák</Link>
-            </button>
-          </div>
           <div className="flex flex-col justify-center items-center">
             <div className="absolute top-[1.7rem] w-28 h-20 bg-navbarBackground rounded-t-full"></div>
+            <div></div>
             <Image
               src="/orgona.png"
-              width={55}
-              height={55}
+              width={80}
+              height={80}
               alt="Picture of the author"
               className="z-10"
             ></Image>
-            <h1 className="text-xl font-semibold md:text-2xl md:mt-1 hover:text-white duration-300 z-10">
+            <h1 className="text-xl font-semibold md:text-2xl md:mt-1 hover:text-white duration-300 z-10 md:text-2xl">
               <button>
                 <Link href="/">Kovács Endre</Link>
               </button>
             </h1>
-            <h2 className="text-[0.6rem] font-thin mb-3 md:text-sm z-10">
+            <h2 className="text-[0.6rem] font-thin mb-3 md:text-base z-10">
               orgonaművész emlékoldala
             </h2>
-            <button onClick={handleToggle} className="focus:outline-none md:hidden bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"  >
+            <button
+              onClick={handleToggle}
+              className="focus:outline-none bg-basicBackground px-2 py-1 text-navbarBackground text-base rounded-md hover:bg-navbarBackground hover:text-basicBackground duration-500 border-2 border-basicBackground z-10"
+            >
               Menu
             </button>
-            <div className={`absolute ${isToggled ? "hidden" : "top-[9.7rem]"} md:block duration-500 md:top-[8.3rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
-          </div>
-          
-          <div className="hidden md:block text-sm">
-            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/ujsagcikkek" && "bg-basicBackground text-navbarBackground"}`}>
-              <Link href="/ujsagcikkek">
-                Újságcikkek, kritikák, elismerések
-              </Link>
-            </button>
-            <button className={`mr-8 border-2 border-basicBackground rounded p-1 hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/kapcsolat" && "bg-basicBackground text-navbarBackground"}`}>
-              <Link href="/kapcsolat">Kapcsolat</Link>
-            </button>
+            <div
+              className={`absolute ${
+                isToggled ? "hidden" : "top-[13rem]"
+              } duration-500 w-28 h-20 bg-navbarBackground rounded-b-full -z-10 `}
+            ></div>
           </div>
         </div>
 
         <div
-          className={`flex flex-col justify-center bg-navbarBackground items-center md:hidden transition-all duration-500 ease-in-out transform${
-            isToggled ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} z-10`}>
-          <div className="w-full border-basicBackground border-t-2 justify-center flex">
-            <h1><Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link></h1>
+          className={`flex flex-col justify-center bg-navbarBackground items-center transition-all duration-500 ease-in-out transform${
+            isToggled
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-10 opacity-0"
+          } z-10 text-basicBackground`}
+        >
+          <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/tanarokespeldakepek" && "bg-basicBackground text-navbarBackground"}`}>
+            <h1>
+              <Link href="/tanarokespeldakepek">Tanárok és Példaképek</Link>
+            </h1>
           </div>
-          <div className="w-full border-basicBackground border-t-2 justify-center flex">
+          <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/muveszkollegak" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/muveszkollegak">Művészkollégák</Link>
           </div>
-          <div className="w-full border-basicBackground border-t-2 justify-center flex">
-          <Link href="/ujsagcikkek">
-                Újságcikkek, kritikák, elismerések
-              </Link>
+          <div className={`w-full border-basicBackground border-t-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/ujsagcikkek" && "bg-basicBackground text-navbarBackground"}`}>
+            <Link href="/ujsagcikkek">Újságcikkek, kritikák, elismerések</Link>
           </div>
-          <div className="w-full border-basicBackground border-t-2 justify-center flex">
+          <div className={`w-full border-t-basicBackground border-b-navbarBackground border-y-2 justify-center flex hover:bg-basicBackground hover:text-navbarBackground duration-500 ${pathName === "/kapcsolat" && "bg-basicBackground text-navbarBackground"}`}>
             <Link href="/kapcsolat">Kapcsolat</Link>
           </div>
-          <div className={`absolute top-[16.3rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}></div>
-
+          <div
+            className={`absolute top-[18rem] md:top-[19rem] w-28 h-20 bg-navbarBackground rounded-b-full -z-10`}
+          ></div>
         </div>
       </div>
     </>
